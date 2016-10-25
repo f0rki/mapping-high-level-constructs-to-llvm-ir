@@ -1,0 +1,6 @@
+## Closures
+
+
+{todo:Describe closures.}
+
+

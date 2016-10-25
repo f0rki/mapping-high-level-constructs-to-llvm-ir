@@ -1,0 +1,1 @@
+void Bar(struct Foo *);

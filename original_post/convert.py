@@ -178,7 +178,8 @@ class Converter:
             self.info("processing chapter", args)
             chaptername = args.strip()
             self.current_chapter = (space_to_dash(chaptername.strip())
-                                    .replace("/", "+"))
+                                    .replace("/", "+")
+                                    .replace(":", ""))
             self.current_section = ""
             self.switch_file("README.md", self.current_chapter)
             self.current_listing = 0
