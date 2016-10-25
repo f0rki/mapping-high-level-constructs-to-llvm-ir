@@ -6,27 +6,6 @@
 
 !contents
 
-!chapter MAINTAINER URGENTLY WANTED
-I wrote this document a few years back in the hope that dozens of people would join up and help expand the document endlessly. So
-far, I've gotten one email that told me that my stuff could be improved, but I never got any actual improvements.
-
-I have not been active in the LLVM community for years for which reason I am now looking for a MAINTAINER of this document.
-
-My suggestion would be this:
-
-# {mail:mikael@lyngvig.org|Contact me} and tell me that you want to be the new maintainer and enhancer of this article.
-# Rewrite the document from MeWeb format to Sphinx format (straightforward, you probably don't need any help with this).  MeWeb is a simple disk-based CMS engine I have written.  This will take about two hours and I'd be willing to help.
-# Put up the document in your own GitHub repository.
-# Announce the change of ownership to the LLVM lists and begin the big work of making this document complete, which includes covering all aspects of LLVM IR and getting reviews from the various clients of LLVM.
-# Tell me that you've done the above and I'll kill this private LLVM site so that there are no stale copies left here.
-
-I know that when I originally had the document on GitHub, people contributed frequently, but after I moved it away from GitHub there has been no activity.
-
-{b:PLEASE, for the sake of LLVM and all those wanting to use it, STEP FORWARD AND TAKE OWNERSHIP!}
-
-This is a {b:great} chance to make a name for yourself in the LLVM community :-)  You could even expand the document into a book!
-
-!chapter Introduction
 In this document we will take a look at how to map various classic high-level programming language constructs to LLVM IR.  The
 purpose of the document is to make the learning curve less steep for aspiring LLVM users.
 
