@@ -175,16 +175,13 @@ define void @main() nounwind {
 ### Pointer-to-Integer Casts
 
 
-{todo:Document pointer-to-integer casts.}
 
 
 ### Integer-to-Pointer Casts
 
-{todo:Document integer-to-pointer casts.}
 
 
 ### Address-Space Casts (Pointer Casts)
 
-{todo:Find a useful example of an address-space casts, using the {c:addrspacecast} instruction, to be included here.}
 
 

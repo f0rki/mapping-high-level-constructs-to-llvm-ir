@@ -13,6 +13,5 @@ To answer that question, we can use one of two methods:
 The naive implementation is documented in the first two exception handling
 examples as the `Object_IsA` function.
 
-{todo:Document the faster class inheritance test implementation.}
 
 

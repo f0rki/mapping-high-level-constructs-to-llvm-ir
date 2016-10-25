@@ -1,0 +1,11 @@
+- [ ] in [casts](mapping-basic-constructs-to-llvm-ir/casts.md): Document pointer-to-integer casts.
+- [ ] in [casts](mapping-basic-constructs-to-llvm-ir/casts.md): Document integer-to-pointer casts.
+- [ ] in [casts](mapping-basic-constructs-to-llvm-ir/casts.md): Find a useful example of an address-space casts, using the `addrspacecast instruction, to be included here.`
+- [ ] in [structure-expressions](mapping-basic-constructs-to-llvm-ir/structure-expressions.md): Document the `extractvalue and {c:insertvalue` instructions.}
+- [ ] in [mapping-control-structures-to-llvm-ir](mapping-control-structures-to-llvm-ir/README.md): Add common control structures such as `if, {c:for`, `switch`, and `while`.}
+- [ ] in [mapping-control-structures-to-llvm-ir](mapping-control-structures-to-llvm-ir/README.md): Explain the purpose of the {c:phi instruction; show how it becomes obvious that you need it as soon as you encounter
+- [ ] in [closures](mapping-advanced-constructs-to-llvm-ir/closures.md): Describe closures.
+- [ ] in [zero-cost-exception-handling](mapping-exception-handling-to-llvm-ir/zero-cost-exception-handling.md): Explain how to implement exception handling using zero cost exception handling.
+- [ ] in [class-equivalence-test](mapping-object-oriented-constructs-to-llvm-ir/class-equivalence-test.md): Finish up class equivalence test sample.
+- [ ] in [class-inheritance-test](mapping-object-oriented-constructs-to-llvm-ir/class-inheritance-test.md): Document the faster class inheritance test implementation.
+- [ ] in [appendix-b-task-list](appendix-b-task-list/README.md): Ask various front-end implementors (Rust, Haskell (GHC), Rubinius, and more) to review and/or contribute so as to make the document great.

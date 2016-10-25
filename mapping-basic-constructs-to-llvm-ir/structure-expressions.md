@@ -57,7 +57,6 @@ define i32 @main() nounwind {
 }
 ```
 
-{todo:Document the {c:extractvalue} and {c:insertvalue} instructions.}
 
 
 

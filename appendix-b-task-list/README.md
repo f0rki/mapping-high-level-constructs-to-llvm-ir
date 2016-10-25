@@ -16,6 +16,5 @@ to-do items are completed:
 - How to express domain specific optimizations?  (i.e. lock elision, or matrix math simplification) (link to existing docs)
 - How to optimize call dispatch or field access in dynamic languages? (ref new patchpoint intrinsics for inline call caching and field access caching)
 
-{todo: Ask various front-end implementors (Rust, Haskell (GHC), Rubinius, and more) to review and/or contribute so as to make the document great.}
 
 

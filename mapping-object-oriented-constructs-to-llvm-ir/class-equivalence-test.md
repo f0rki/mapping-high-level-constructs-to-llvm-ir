@@ -14,7 +14,6 @@ of the time):
 bool equal = (typeid(first) == typeid(other));
 ```
 
-{todo:Finish up class equivalence test sample.}
 
 
 As far as I know, RTTI is simply done by adding two fields to the _vtable structure: `parent` and `signature`.  The former is a

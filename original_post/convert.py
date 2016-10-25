@@ -81,12 +81,14 @@ class Converter:
     def __enter__(self):
         self.curof = open(os.path.join(self.outdir, "README.md"), "w")
         self.summaryf = open(os.path.join(self.outdir, "SUMMARY.md"), "w")
+        self.todof = open(os.path.join(self.outdir, "TODOS.md"), "w")
         self.inp = LineBuffer(self.infile)
         return self
 
     def __exit__(self, type, value, traceback):
         self.curof.close()
         self.summaryf.close()
+        self.todof.close()
         self.inp.destroy()
         return False
 
@@ -106,8 +108,9 @@ class Converter:
             else:
                 self.process_line(line)
 
-    def process_line(self, line):
-        # TODO: regex replace
+        # self.summaryf.write("* [TODO List](TODOS.md)")
+
+    def convert_line(self, line):
         line = re.sub(r"{c:([^}]+)}", r"`\1`", line)
         line = re.sub(r"{b:([^}]+)}", r"**\1**", line)
         line = re.sub(r"{i:([^}]+)}", r"*\1*", line)
@@ -116,10 +119,26 @@ class Converter:
         line = re.sub(r"{mail:([^|]+)\|([^}]+)}",
                       r"[\2](mailto:\1)", line)
         line = line.replace("#", "-")
+        return line
+
+    def process_line(self, line):
+        line = self.convert_line(line)
         self.curof.write(line)
 
     def handle_todo(self, line):
-        self.curof.write(line)
+        line = re.sub(r"{todo:([^}]+)}", r"\1", line).strip()
+
+        if self.current_section:
+            link = "[{}]({}/{}.md)".format(self.current_section,
+                                           self.current_chapter,
+                                           self.current_section)
+        else:
+            link = "[{}]({}/{}.md)".format(self.current_chapter,
+                                           self.current_chapter,
+                                           "README")
+
+        self.todof.write("- [ ] in {}: {}\n"
+                         .format(link, self.convert_line(line)))
 
     def switch_file(self, newfile, subdir=None):
         if subdir is None:
