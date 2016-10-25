@@ -108,9 +108,9 @@ class Converter:
 
     def process_line(self, line):
         # TODO: regex replace
-        line = re.sub(r"{c:(.+)}", r"`\1`", line)
-        line = re.sub(r"{b:(.+)}", r"**\1**", line)
-        line = re.sub(r"{i:(.+)}", r"*\1*", line)
+        line = re.sub(r"{c:([^}]+)}", r"`\1`", line)
+        line = re.sub(r"{b:([^}]+)}", r"**\1**", line)
+        line = re.sub(r"{i:([^}]+)}", r"*\1*", line)
         line = re.sub(r"{link:([^|]+)\|([^}]+)}",
                       r"[\2](\1)", line)
         line = re.sub(r"{mail:([^|]+)\|([^}]+)}",
@@ -141,17 +141,17 @@ class Converter:
         if not os.path.exists(realdir):
             mkdir_p(realdir)
         sourcefname = os.path.join(realdir,
-                                   "listing_{}_{}.{}"
-                                   .format(self.current_section,
-                                           self.current_listing,
+                                   "listing_{}.{}"
+                                   .format(self.current_listing,
                                            extension))
         sourcef = open(sourcefname, "w")
         self.current_listing += 1
+
         def write(what):
             self.curof.write(what)
             sourcef.write(what)
 
-        self.curof.write("```" + extension)
+        self.curof.write("```" + extension + "\n")
         lastwasempty = False
         while self.inp.has_next:
             i, line = self.inp.next()
@@ -162,9 +162,10 @@ class Converter:
                 if lastwasempty:
                     write("\n")
                 write(line[1:])
+                lastwasempty = False
             else:
                 break
-        self.curof.write("```")
+        self.curof.write("```\n")
         if lastwasempty:
             self.inp.put_back("\n")
 
@@ -191,11 +192,12 @@ class Converter:
             sectionname = args.strip()
             self.current_section = (space_to_dash(sectionname)
                                     .replace("/", "+"))
-            self.switch_file(self.current_section, self.current_chapter)
+            self.switch_file(self.current_section + ".md",
+                             self.current_chapter)
             self.curof.write("## {}\n".format(sectionname))
             self.curof.write("\n\n")
 
-            self.summaryf.write("   * [{}]({}/{}.md)"
+            self.summaryf.write("   * [{}]({}/{}.md)\n"
                                 .format(sectionname,
                                         self.current_chapter,
                                         self.current_section))
@@ -206,12 +208,12 @@ class Converter:
             # self.curof.write("`{} {}`".format(cmd, args))
 
     def warn(self, *args):
-        s = " ".join(map(str, args))
+        s = " ".join(map(lambda x: str(x).strip(), args))
         print("\x1b[93;41mWARNING\x1b[0m (line {}): {}"
               .format(self.current_line, s))
 
     def info(self, *args):
-        s = " ".join(map(str, args))
+        s = " ".join(map(lambda x: str(x).strip(), args))
         print("info (line {}): {}".format(self.current_line, s))
 
 
