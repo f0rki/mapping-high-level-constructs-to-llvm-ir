@@ -11,12 +11,14 @@ The former is created by introducing a new symbol for the variable:
 ```ll
 %1 = some computation
 ```
+
 The latter is created by allocating the variable on the stack:
 
 
 ```ll
 %2 = alloca i32
 ```
+
 Please notice that `alloca` yields a pointer to the allocated type.  As is generally the case in LLVM, you must explicitly use a
 
 `load` or `store` instruction to read or write the value respectively.

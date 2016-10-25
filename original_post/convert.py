@@ -158,14 +158,14 @@ class Converter:
             if line.strip() == "":
                 lastwasempty = True
                 continue
-            if line[0] == "\t":
+            if line[0] == "\t" and "!format" not in line:
                 if lastwasempty:
                     write("\n")
                 write(line[1:])
                 lastwasempty = False
             else:
                 break
-        self.curof.write("```\n")
+        self.curof.write("```\n\n")
         if lastwasempty:
             self.inp.put_back("\n")
 

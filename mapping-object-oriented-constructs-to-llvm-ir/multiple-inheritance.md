@@ -45,6 +45,7 @@ private:
 	int _c;
 };
 ```
+
 This is equivalent to the following LLVM IR:
 
 
@@ -86,6 +87,7 @@ define void @Derived_SetC(%Derived* %this, i32 %value) nounwind {
 	ret void
 }
 ```
+
 And the compiler then supplies the needed type casts and pointer arithmentic whenever `baseB` is being referenced as an instance
 
 of `BaseB`.  Please notice that all it takes is a `bitcast` from one class to another as well as an adjustment of the last

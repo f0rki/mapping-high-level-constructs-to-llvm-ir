@@ -15,6 +15,7 @@ union Foo
 };
 Foo Union;
 ```
+
 Becomes this when run through Clang++:
 
 
@@ -22,6 +23,7 @@ Becomes this when run through Clang++:
 %union.Foo = type { double }
 @Union = %union.Foo { 0.0 }
 ```
+
 What happened here?  Where did the other union members go?  The answer is that in LLVM there are no unions; there are only structs
 
 that can be cast into whichever type the front-end want to cast the struct into.  So to access the above union from LLVM IR, you'd
@@ -33,6 +35,7 @@ store i32 1, i32* %1
 %2 = bitcast %union.Foo* @Union to i8**
 store i8* null, i8** %2
 ```
+
 This may seem strange, but the truth is that a union is nothing more than a piece of memory that is being accessed using different
 
 implicit pointer casts.

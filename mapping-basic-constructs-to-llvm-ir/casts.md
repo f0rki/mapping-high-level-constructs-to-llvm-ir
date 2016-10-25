@@ -36,6 +36,7 @@ void allocate()
 	free(foo);
 }
 ```
+
 Becomes:
 
 
@@ -54,6 +55,7 @@ define void @allocate() nounwind {
 	ret void
 }
 ```
+
 ### Zero-Extending Casts (Unsigned Upcasts)
 
 
@@ -69,6 +71,7 @@ void main()
 	word = byte;
 }
 ```
+
 You use the `zext` instruction:
 
 
@@ -83,6 +86,7 @@ define void @main() nounwind {
 	ret void
 }
 ```
+
 ### Sign-Extending Casts (Signed Upcasts)
 
 
@@ -100,6 +104,7 @@ define void @main() nounwind {
 	ret void
 }
 ```
+
 ### Truncating Casts (Signed and Unsigned Downcasts)
 
 
@@ -118,6 +123,7 @@ define void @main() nounwind {
 	ret void
 }
 ```
+
 ### Floating-Point Extending Casts (Float Upcasts)
 
 
@@ -133,6 +139,7 @@ void main()
 	large = small;
 }
 ```
+
 Becomes:
 
 
@@ -147,6 +154,7 @@ define void @main() nounwind {
 	ret void
 }
 ```
+
 ### Floating-Point Truncating Casts (Float Downcasts)
 
 
@@ -163,6 +171,7 @@ define void @main() nounwind {
 	ret void
 }
 ```
+
 ### Pointer-to-Integer Casts
 
 

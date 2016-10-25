@@ -39,6 +39,7 @@ int main()
 	return 0;
 }
 ```
+
 This becomes:
 
 ; Compiled and run successfully against LLVM v3.4 on 2013.12.06.
@@ -128,6 +129,7 @@ define void @main() nounwind {
 	ret void
 }
 ```
+
 And now for a slightly more complex example that involves local variables:
 
 
@@ -153,6 +155,7 @@ int main(void)
 	return 0;
 }
 ```
+
 This becomes something like this:
 
 
@@ -278,6 +281,7 @@ define i32 @main() nounwind {
 	ret i32 0
 }
 ```
+
 Another possible way of doing the above would be to generate an LLVM IR function for each state and then store a function pointer
 
 in the context structure, which is updated whenever a new state/function needs to be invoked.

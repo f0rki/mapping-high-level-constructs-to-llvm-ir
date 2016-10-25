@@ -29,6 +29,7 @@ protected:
 	int _b;
 }
 ```
+
 Here, `a` and `b` will be laid out to follow one another in memory so that inheriting from a class is simply a matter of
 
 declaring a the base class as a first member in the inheriting class:
@@ -57,6 +58,7 @@ define void @Derived_SetB(%Derived* %this, i32 %value) nounwind {
 	ret void
 }
 ```
+
 So the base class simply becomes plain members of the type declaration for the derived class.
 
 

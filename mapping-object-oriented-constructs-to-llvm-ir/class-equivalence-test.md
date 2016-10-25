@@ -13,6 +13,7 @@ of the time):
 ```cpp
 bool equal = (typeid(first) == typeid(other));
 ```
+
 {todo:Finish up class equivalence test sample.}
 
 

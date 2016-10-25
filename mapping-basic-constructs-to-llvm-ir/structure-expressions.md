@@ -30,6 +30,7 @@ int main(void)
 	return 0;
 }
 ```
+
 Becomes:
 
 
@@ -55,6 +56,7 @@ define i32 @main() nounwind {
 	ret i32 0
 }
 ```
+
 {todo:Document the {c:extractvalue} and {c:insertvalue} instructions.}
 
 

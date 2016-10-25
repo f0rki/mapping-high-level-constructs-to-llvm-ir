@@ -29,6 +29,7 @@ private:
 	size_t _length;
 };
 ```
+
 We first transform this code into two separate pieces:
 
 
@@ -60,14 +61,18 @@ define void @Foo_SetLength(%Foo* %this, i32 %value) nounwind {
 	ret void
 }
 ```
+
 Then we make sure that the constructor (``Foo_Create_Default``) is invoked
 
 whenever an instance of the structure is created:
 
 ```cpp
 Foo foo;
+```
 
-!format LLVM
+```ll
+
 %foo = alloca %Foo
 call void @Foo_Create_Default(%Foo* %foo)
 ```
+

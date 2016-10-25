@@ -8,6 +8,7 @@ inside the structure:
 ```cpp
 void Bar(struct Foo *);
 ```
+
 Becomes:
 
 
@@ -15,3 +16,4 @@ Becomes:
 %Foo = type opaque
 declare void @Bar(%Foo)
 ```
+

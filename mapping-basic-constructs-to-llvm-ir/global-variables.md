@@ -11,6 +11,7 @@ int main()
 	return variable;
 }
 ```
+
 Becomes:
 
 
@@ -22,6 +23,7 @@ define i32 @main() nounwind {
 	ret i32 %1
 }
 ```
+
 Please notice that LLVM views global variables as pointers; so you must explicitly dereference the global variable using the
 
 `load` instruction when accessing its value, likewise you must explicitly store the value of a global variable using the `store`

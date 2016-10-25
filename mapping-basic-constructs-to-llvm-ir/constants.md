@@ -12,6 +12,7 @@ simply inserts the constant value wherever it is being used in a computation:
 ```ll
 %1 = add i32 %0, 17     ; 17 is an inlined constant
 ```
+
 Constants that do occupy memory are defined using the `constant` keyword:
 
 
@@ -20,6 +21,7 @@ Constants that do occupy memory are defined using the `constant` keyword:
 %struct = type { i32, i8 }
 @struct_constant = internal constant %struct { i32 16, i8 4 }
 ```
+
 Such a constant is really a global variable whose visibility can be limited with `private` or `internal` so that it is
 
 invisible outside the current module.

@@ -14,6 +14,7 @@ int foo(int a)
 	return function(10);
 }
 ```
+
 Here the "problem" is that the lambda function references a local variable of the caller, namely `a`, even though the lambda
 
 function is a function of its own.  This can be solved easily by passing the local variable in as an implicit argument to the
@@ -30,6 +31,7 @@ define i32 @foo(i32 %a) nounwind {
 	ret i32 %1
 }
 ```
+
 Alternatively, if the lambda function uses more than a few variables, you can wrap them up in a structure which you pass in a
 
 pointer to the lambda function:
@@ -42,6 +44,7 @@ int foo(int a, int b)
 	return function(10);
 }
 ```
+
 Becomes:
 
 
@@ -80,6 +83,7 @@ define i32 @foo(i32 %a, i32 %b) nounwind {
 	ret i32 %4
 }
 ```
+
 Obviously there are some possible variations over this theme:
 
 

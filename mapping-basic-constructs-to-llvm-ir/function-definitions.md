@@ -16,6 +16,7 @@ int Bar(void)
 	return 17;
 }
 ```
+
 Becomes:
 
 
@@ -24,6 +25,7 @@ define i32 @Bar() nounwind {
 	ret i32 17
 }
 ```
+
 ### Simple Private Functions
 
 
@@ -34,6 +36,7 @@ define private i32 @Foo() nounwind {
 	ret i32 17
 }
 ```
+
 ### Functions with a Variable Number of Parameters
 
 
@@ -53,6 +56,7 @@ define i32 @main(i32 %argc, i8** %argv) nounwind {
 	ret i32 0
 }
 ```
+
 ### Exception-Aware Functions
 
 

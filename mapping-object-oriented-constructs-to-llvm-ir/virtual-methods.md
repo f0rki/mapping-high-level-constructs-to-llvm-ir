@@ -30,6 +30,7 @@ int main()
 	return foo.GetLengthTimesTwo();
 }
 ```
+
 This becomes:
 
 
@@ -75,6 +76,7 @@ define i32 @main(i32 %argc, i8** %argv) nounwind {
 	ret i32 %5
 }
 ```
+
 Please notice that some C++ compilers store `_vtable` at a negative offset into the structure so that things like
 
 `memcpy(this, 0, sizeof(*this))` work, even though such commands should always be avoided in an OOP context.

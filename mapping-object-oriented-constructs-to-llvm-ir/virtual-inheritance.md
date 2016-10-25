@@ -30,6 +30,7 @@ class Derived:
 	int d;
 };
 ```
+
 `Derived` will only contain a single instance of `BaseA` even if its inheritance graph dictates that it should have two
 
 instances.  The result looks something like this:
@@ -44,6 +45,7 @@ public:
 	int d;
 };
 ```
+
 So the second instance of `a` is silently ignored because it would cause multiple instances of `BaseA` to exist in `Derived`,
 
 which clearly would cause lots of confusion and ambiguities.
