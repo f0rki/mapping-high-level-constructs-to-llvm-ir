@@ -1,4 +1,13 @@
-# Appendix C: Thank You
+# Contribution
+
+If you want to contribute to this document you can:
+
+* [Create an issue on Github](https://github.com/f0rki/mapping-high-level-constructs-to-llvm-ir/issues)
+* Fork and fix it yourself. We're happy to merge any pull requests or accept
+  patches.
+
+
+## Thank You
 
 A brief list of all people who've contributed to the document (thank you all very much!):
 

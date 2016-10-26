@@ -1,7 +1,5 @@
 ## Casts
 
-
-
 There are nine different types of casts:
 
 - Bitwise casts (type casts).
@@ -10,8 +8,8 @@ There are nine different types of casts:
 - Truncating casts (signed and unsigned downcasts).
 - Floating-point extending casts (float upcasts).
 - Floating-point truncating casts (float downcasts).
-- Pointer-to-integer casts ({todo:Document pointer-to-integer casts}).
-- Integer-to-pointer casts ({todo:Document integer-to-pointer casts}).
+- Pointer-to-integer casts.
+- Integer-to-pointer casts.
 - Address-space casts (pointer casts).
 
 
@@ -174,11 +172,15 @@ define void @main() nounwind {
 
 ### Pointer-to-Integer Casts
 
-
+Pointers do not support arithmetic, which is sometimes needed when doing
+systems programming. LLVM has support for casting pointer types to integer
+types using the `ptrtoint` instruction ([reference](http://llvm.org/docs/LangRef.html#ptrtoint-to-instruction))
 
 
 ### Integer-to-Pointer Casts
 
+The `inttoptr` instruction is used to cast an integer back to a pointer
+([reference](http://llvm.org/docs/LangRef.html#inttoptr-to-instruction)).
 
 
 ### Address-Space Casts (Pointer Casts)

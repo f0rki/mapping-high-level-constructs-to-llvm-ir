@@ -1,9 +1,6 @@
 ## Constant Expressions
 
 
-**TODO:** Document the various forms of constant expressions that exist and .. how they can be very useful.  For instance,
-`getelementptr` constant expressions are almost unavoidable in all but the simplest programs.
-
 
 ### Size-Of Computations
 
