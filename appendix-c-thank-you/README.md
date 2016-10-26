@@ -2,6 +2,8 @@
 
 A brief list of all people who've contributed to the document (thank you all very much!):
 
+* Michael Rodler (current maintainer and back-porter from MeWeb markup to GitHub markdown).
+* Mikael Egevig (original author of the document itself - under the name of Mikael Lyngvig).
 * Dirkjan Ochtman (basically all the generator-related stuff by giving me some crucial samples).
 * Eli Bendersky (for small grammar fixes and mention of `opt`'s `.bc` output).
 * Sean Silva (for using proper C++11 lambda syntax in lambda samples).
