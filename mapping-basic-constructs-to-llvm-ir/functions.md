@@ -76,6 +76,38 @@ define i32 @main(i32 %argc, i8** %argv) nounwind {
 ```
 
 
+### Function Overloading
+
+Function overloading is actually not dealt with on the level of LLVM IR, but on
+the source language. Function names are mangled, so that they encode the types
+they take as parameter and return in their function name. For a C++ example:
+
+```cpp
+int funcion(int a, int b) {
+    return a + b;
+}
+
+int function(double a, double b, double x) {
+    return a*b + x;
+}
+```
+
+For LLVM these two are completely different functions, with different names
+etc.
+
+```llvm
+define i32 @_Z4funcii(i32 %a, i32 %b) #0 {
+; [...]
+  ret i32 %5
+}
+
+define double @_Z4funcddd(double %a, double %b, double %x) #0 {
+; [...]
+  ret double %8
+}
+```
+
+
 ### Struct by Value as Parameter or Return Value
 
 Classes or structs are often passed around by value, implicitly cloning the
@@ -169,10 +201,10 @@ define i32 @main() #1 {
   %2 = alloca %struct.Point, align 8
 ; copy the global initializer main::a to %a
   %3 = bitcast %struct.Point* %a to i8*
-  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %3, i8* bitcast (%struct.Point* @_ZZ4mainE1a to i8*), i64 24, i32 8, i1 false)
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %3, i8* bitcast (%struct.Point* @main.a to i8*), i64 24, i32 8, i1 false)
 ; copy the global initializer main::b to %b
   %4 = bitcast %struct.Point* %b to i8*
-  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %4, i8* bitcast (%struct.Point* @_ZZ4mainE1b to i8*), i64 24, i32 8, i1 false)
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %4, i8* bitcast (%struct.Point* @main.b to i8*), i64 24, i32 8, i1 false)
 ; clone a to %1
   %5 = bitcast %struct.Point* %1 to i8*
   %6 = bitcast %struct.Point* %a to i8*
@@ -215,3 +247,4 @@ Becomes:
 ```llvm
 @Function = global i32(i8*)* null
 ```
+
