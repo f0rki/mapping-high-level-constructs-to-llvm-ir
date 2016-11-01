@@ -15,7 +15,7 @@ It is only a matter of discarding the actual field names and then index with
 
 numerals starting from zero:
 
-```ll
+```llvm
 %Foo = type { i32 }
 ```
 

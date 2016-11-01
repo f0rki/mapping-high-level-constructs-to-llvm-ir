@@ -10,7 +10,7 @@ object.
 It is important to notice that changes to the boxed value does not affect the original value and vice verse.  The code below
 illustrates both steps:
 
-```ll
+```llvm
 @Boxee = global i32 17
 
 %Integer = type { i32 }

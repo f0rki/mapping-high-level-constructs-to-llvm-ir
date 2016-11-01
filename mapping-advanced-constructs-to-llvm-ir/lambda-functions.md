@@ -20,7 +20,7 @@ Here the "problem" is that the lambda function references a local variable of th
 function is a function of its own.  This can be solved easily by passing the local variable in as an implicit argument to the
 lambda function:
 
-```ll
+```llvm
 define internal i32 @lambda(i32 %a, i32 %x) alwaysinline nounwind {
 	%1 = add i32 %a, %x
 	ret i32 %1
@@ -48,7 +48,7 @@ int foo(int a, int b)
 Becomes:
 
 
-```ll
+```llvm
 %Lambda_Arguments = type {
 	i32,        ; 0: a (argument)
 	i32,        ; 1: b (argument)

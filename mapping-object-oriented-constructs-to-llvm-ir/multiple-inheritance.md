@@ -49,7 +49,7 @@ private:
 This is equivalent to the following LLVM IR:
 
 
-```ll
+```llvm
 %BaseA = type {
 	i32         ; '_a' from BaseA
 }

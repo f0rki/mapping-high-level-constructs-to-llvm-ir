@@ -36,7 +36,7 @@ We first transform this code into two separate pieces:
 - The structure definition.
 - The list of methods, including the constructor.
 
-```ll
+```llvm
 ; The structure definition for class Foo.
 %Foo = type { i32 }
 
@@ -70,7 +70,7 @@ whenever an instance of the structure is created:
 Foo foo;
 ```
 
-```ll
+```llvm
 
 %foo = alloca %Foo
 call void @Foo_Create_Default(%Foo* %foo)

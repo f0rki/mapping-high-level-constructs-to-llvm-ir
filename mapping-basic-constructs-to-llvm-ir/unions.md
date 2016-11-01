@@ -19,7 +19,7 @@ Foo Union;
 Becomes this when run through Clang++:
 
 
-```ll
+```llvm
 %union.Foo = type { double }
 @Union = %union.Foo { 0.0 }
 ```
@@ -29,7 +29,7 @@ What happened here?  Where did the other union members go?  The answer is that i
 that can be cast into whichever type the front-end want to cast the struct into.  So to access the above union from LLVM IR, you'd
 use the `bitcast` instruction to cast a pointer to the "union" into whatever pointer you'd want it to be:
 
-```ll
+```llvm
 %1 = bitcast %union.Foo* @Union to i32*
 store i32 1, i32* %1
 %2 = bitcast %union.Foo* @Union to i8**

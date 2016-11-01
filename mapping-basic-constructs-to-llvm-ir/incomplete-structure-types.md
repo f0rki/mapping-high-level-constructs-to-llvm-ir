@@ -12,7 +12,7 @@ void Bar(struct Foo *);
 Becomes:
 
 
-```ll
+```llvm
 %Foo = type opaque
 declare void @Bar(%Foo)
 ```

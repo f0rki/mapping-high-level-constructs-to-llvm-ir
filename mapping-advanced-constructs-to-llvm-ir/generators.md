@@ -44,7 +44,7 @@ This becomes:
 
 ; Compiled and run successfully against LLVM v3.4 on 2013.12.06.
 
-```ll
+```llvm
 %foo_context = type {
 	i8*,      ; 0: block (state)
 	i32       ; 1: value (result)
@@ -161,7 +161,7 @@ This becomes something like this:
 
 ; Compiled and run successfully against LLVM v3.4 on 2013.12.06.
 
-```ll
+```llvm
 %foo_context = type {
 	i8*,      ; 0: block (state)
 	i32,      ; 1: start (argument)

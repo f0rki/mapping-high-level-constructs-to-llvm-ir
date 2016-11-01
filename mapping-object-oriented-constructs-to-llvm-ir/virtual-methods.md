@@ -34,7 +34,7 @@ int main()
 This becomes:
 
 
-```ll
+```llvm
 %Foo_vtable_type = type { i32(%Foo*)* }
 
 %Foo = type { %Foo_vtable_type*, i32 }

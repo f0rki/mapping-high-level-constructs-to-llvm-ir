@@ -34,7 +34,7 @@ Here, `a` and `b` will be laid out to follow one another in memory so that inher
 
 declaring a the base class as a first member in the inheriting class:
 
-```ll
+```llvm
 %Base = type {
 	i32         ; '_a' in class Base
 }

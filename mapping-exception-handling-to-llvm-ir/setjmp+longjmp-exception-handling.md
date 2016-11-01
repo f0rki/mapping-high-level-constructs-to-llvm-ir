@@ -12,7 +12,7 @@ become quite high.
 
 The sample translates into something like this:
 
-```ll
+```llvm
 ; jmp_buf is very platform specific, this is for illustration only...
 %jmp_buf = type { i32 }
 declare i32 @setjmp(%jmp_buf* %env)

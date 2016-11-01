@@ -9,7 +9,7 @@ C++, they may even be called interchangeably without causing unseen or unwanted 
 
 All calls of the form `new X` are mapped into:
 
-```ll
+```llvm
 declare i8* @malloc(i32) nounwind
 
 %X = type { i8 }
@@ -37,7 +37,7 @@ Calls of the form `new X(Y, Z)` are the same, except `Y` and `Z` are passed into
 New operations involving arrays are equally simple.  The code `new X[100]` is mapped into a loop that initializes each array
 element in turn:
 
-```ll
+```llvm
 declare i8* @malloc(i32) nounwind
 
 %X = type { i32 }

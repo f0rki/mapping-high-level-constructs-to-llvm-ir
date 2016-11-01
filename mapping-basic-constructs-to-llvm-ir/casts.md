@@ -38,7 +38,7 @@ void allocate()
 Becomes:
 
 
-```ll
+```llvm
 %Foo = type { i32 }
 
 declare i8* @malloc(i32)
@@ -73,7 +73,7 @@ void main()
 You use the `zext` instruction:
 
 
-```ll
+```llvm
 @byte = global i8 117
 @word = global i32 0
 
@@ -91,7 +91,7 @@ define void @main() nounwind {
 To upcast a signed value, you replace the `zext` instruction with the `sext` instruction and everything else works just like in
 the previous section:
 
-```ll
+```llvm
 @char = global i8 -17
 @int  = global i32 0
 
@@ -110,7 +110,7 @@ Both signed and unsigned integers use the same instruction, `trunc`, to reduce t
 because LLVM IR assumes that all signed integer values are in two's complement format for which reason `trunc` is sufficient to
 handle both cases:
 
-```ll
+```llvm
 @int = global i32 -1
 @char = global i8 0
 
@@ -141,7 +141,7 @@ void main()
 Becomes:
 
 
-```ll
+```llvm
 @small = global float 1.25
 @large = global double 0.0
 
@@ -158,7 +158,7 @@ define void @main() nounwind {
 
 Likewise, a floating point number can be truncated to a smaller size:
 
-```ll
+```llvm
 @large = global double 1.25
 @small = global float 0.0
 

@@ -15,7 +15,7 @@ int main()
 Becomes:
 
 
-```ll
+```llvm
 @variable = global i32 14
 
 define i32 @main() nounwind {

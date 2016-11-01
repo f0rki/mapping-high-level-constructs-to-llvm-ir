@@ -7,7 +7,7 @@
 Even though the compiler ought to know the exact size of everything in use (for statically checked languages), it can at times be
 convenient to ask LLVM to figure out the size of a structure for you.  This is done with the following little snippet of code:
 
-```ll
+```llvm
 %Struct = type { i8, i32, i8* }
 @Struct_size = constant i32 ptrtoint (%Struct* getelementptr (%Struct* null, i32 1)) to i32
 ```

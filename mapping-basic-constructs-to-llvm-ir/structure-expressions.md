@@ -34,7 +34,7 @@ int main(void)
 Becomes:
 
 
-```ll
+```llvm
 %Foo = type {
 	i32,        ; 0: a
 	i8*,        ; 1: b

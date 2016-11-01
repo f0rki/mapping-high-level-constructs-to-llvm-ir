@@ -10,7 +10,7 @@ The C++ sample above maps to the following code:
 
 ; Compiled and run succesfully against LLVM v3.4 on 2013.12.04.
 
-```ll
+```llvm
 ;********************* External and Utility functions *********************
 
 declare i8* @malloc(i32) nounwind

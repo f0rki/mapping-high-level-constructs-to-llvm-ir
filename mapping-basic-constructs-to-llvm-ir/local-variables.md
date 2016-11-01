@@ -8,14 +8,14 @@ There are two kinds of local variables in LLVM:
 
 The former is created by introducing a new symbol for the variable:
 
-```ll
+```llvm
 %1 = some computation
 ```
 
 The latter is created by allocating the variable on the stack:
 
 
-```ll
+```llvm
 %2 = alloca i32
 ```
 

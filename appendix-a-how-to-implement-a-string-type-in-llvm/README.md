@@ -15,7 +15,7 @@ and so on, depending on which support functions are defined to operate on the st
 It all boils down to making a suitable type definition for the class and then define a rich set of functions to operate on the type
 definition:
 
-```ll
+```llvm
 ; The actual type definition for our 'String' type.
 %String = type {
 	i8*,     ; 0: buffer; pointer to the character buffer
