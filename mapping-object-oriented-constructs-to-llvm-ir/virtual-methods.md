@@ -2,8 +2,9 @@
 
 
 
-A virtual method is no more than a compiler-controlled function pointer.  Each virtual method is recorded in the `vtable`, which
-is a structure of all the function pointers needed by a given class:
+A virtual method is no more than a compiler-controlled function pointer. Each
+virtual method is recorded in the `vtable`, which is a structure of all the
+function pointers needed by a given class:
 
 ```cpp
 class Foo
@@ -77,8 +78,6 @@ define i32 @main(i32 %argc, i8** %argv) nounwind {
 }
 ```
 
-Please notice that some C++ compilers store `_vtable` at a negative offset into the structure so that things like
-
-`memcpy(this, 0, sizeof(*this))` work, even though such commands should always be avoided in an OOP context.
-
-
+Please notice that some C++ compilers store `_vtable` at a negative offset into
+the structure so that things like `memset(this, 0, sizeof(*this))` work, even
+though such commands should always be avoided in an OOP context.
