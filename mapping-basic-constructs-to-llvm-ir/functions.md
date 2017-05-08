@@ -83,7 +83,7 @@ the source language. Function names are mangled, so that they encode the types
 they take as parameter and return in their function name. For a C++ example:
 
 ```cpp
-int funcion(int a, int b) {
+int function(int a, int b) {
     return a + b;
 }
 
