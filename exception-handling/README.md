@@ -23,4 +23,4 @@ LLVM directly supports this kind of exception handling.
 
 In the three sections below, we'll be using this sample and transform it:
 
-{% codesnippet "exception-handlings/listings/exception_example.cpp", language="c++" %}{% endcodesnippet %}
+{% codesnippet "exception-handling/listings/exception_example.cpp", language="c++" %}{% endcodesnippet %}
