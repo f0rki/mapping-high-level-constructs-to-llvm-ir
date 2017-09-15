@@ -1,6 +1,8 @@
 {
     "plugins": [
-        "codesnippet"
+        "codesnippet",
+        "-highlight",
+        "myhighlight@git+https://github.com/f0rki/plugin-highlight"
     ],
     "pluginsConfig": {
 
