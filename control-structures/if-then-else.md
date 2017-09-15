@@ -3,7 +3,7 @@
 First let's take a look at a very simple function, that computes the maximum of
 two integers. This is implemented using a single if control statement.
 
-{% codesnippet "control-structures/listings/simple_if_max.cpp", language="llvm" %}{% endcodesnippet %}
+{% codesnippet "control-structures/listings/simple_if_max.cpp" %}{% endcodesnippet %}
 
 Remember that in LLVM IR control-flow is implemented by jumping between *basic
 blocks*, which contain instruction sequences that do not change control flow.
