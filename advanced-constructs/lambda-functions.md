@@ -15,7 +15,7 @@ the caller, namely `a`, even though the lambda function is a function of its
 own.  This can be solved easily by passing the local variable in as an implicit
 argument to the lambda function:
 
-{% codesnippet "advanced-constructs/listings/lambda_func_0_cleaned.ll" %}{% endcodesnippet %}
+{% codesnippet "advanced-constructs/listings/lambda_func_0_cleaned.ll" language="llvm" %}{% endcodesnippet %}
 
 Alternatively, if the lambda function uses more than a few variables, you can
 wrap them up in a structure which you pass in a pointer to the lambda function:
@@ -24,7 +24,7 @@ wrap them up in a structure which you pass in a pointer to the lambda function:
 
 Becomes:
 
-{% codesnippet "advanced-constructs/listings/lambda_func_1_cleaned.ll" %}{% endcodesnippet %}
+{% codesnippet "advanced-constructs/listings/lambda_func_1_cleaned.ll" language="llvm" %}{% endcodesnippet %}
 
 Obviously there are some possible variations over this theme:
 
