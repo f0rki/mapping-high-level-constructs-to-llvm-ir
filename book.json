@@ -1,6 +1,6 @@
 {
     "plugins": [
-        "plugins" : [ "codesnippet" ]
+        "codesnippet"
     ],
     "pluginsConfig": {
 
