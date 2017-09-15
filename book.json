@@ -1,4 +1,12 @@
 {
     "plugins": [
-    ]
+        "include-codeblock"
+    ],
+    "pluginsConfig": {
+        "include-codeblock": {
+            "template": "full",
+            "unindent": true,
+            "edit": false
+        }
+    }
 }
