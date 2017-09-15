@@ -8,23 +8,23 @@ for the lambda function.  There are a few different ways of implementing lambda
 functions (see [Wikipedia on Nested
 Functions](en.wikipedia.org/wiki/Nested_function) for more information).
 
-[include](listings/lambda_func_0.cpp)
+[include,lang:"cpp"](listings/lambda_func_0.cpp)
 
 Here the "problem" is that the lambda function references a local variable of
 the caller, namely `a`, even though the lambda function is a function of its
 own.  This can be solved easily by passing the local variable in as an implicit
 argument to the lambda function:
 
-[include](listings/lambda_func_0_cleaned.ll)
+[include,lang:"llvm"](listings/lambda_func_0_cleaned.ll)
 
 Alternatively, if the lambda function uses more than a few variables, you can
 wrap them up in a structure which you pass in a pointer to the lambda function:
 
-[include:'show'](listings/lambda_func_1.cpp)
+[include,'show',lang:"cpp"](listings/lambda_func_1.cpp)
 
 Becomes:
 
-[include](listings/lambda_func_1_cleaned.ll)
+[include,lang:"llvm"](listings/lambda_func_1_cleaned.ll)
 
 Obviously there are some possible variations over this theme:
 

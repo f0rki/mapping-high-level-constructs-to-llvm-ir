@@ -1,12 +1,11 @@
 {
     "plugins": [
-        "include-codeblock"
+        "plugins" : [ "include-highlight" ]
     ],
     "pluginsConfig": {
-        "include-codeblock": {
-            "template": "full",
-            "unindent": true,
-            "edit": false
+        "include-highlight": {
+            "extensionToLanguage": {
+                "ll": "llvm"
+            }
         }
     }
-}
