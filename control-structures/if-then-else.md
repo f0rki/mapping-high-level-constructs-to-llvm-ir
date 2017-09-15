@@ -48,6 +48,6 @@ a boolean condition. This shortens the code significantly.
 
 
 <a name="br-link">1</a>: [LangRef: br](http://llvm.org/docs/LangRef.html#br-instruction)  
-<a name="select-link">2</a>: [LangRef: icmp](http://llvm.org/docs/LangRef.html#icmp-instruction)  
+<a name="icmp-link">2</a>: [LangRef: icmp](http://llvm.org/docs/LangRef.html#icmp-instruction)  
 <a name="select-link">3</a>: [LangRef: select](http://llvm.org/docs/LangRef.html#select-instruction)  
 
