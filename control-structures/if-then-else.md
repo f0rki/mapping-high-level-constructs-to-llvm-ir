@@ -3,7 +3,7 @@
 First let's take a look at a very simple function, that computes the maximum of
 two integers. This is implemented using a single if control statement.
 
-{% codesnippet "control-structures/listings/simple_if_max.cpp" language="llvm" %}{% endcodesnippet %}
+{% codesnippet "control-structures/listings/simple_if_max.cpp", language="llvm" %}{% endcodesnippet %}
 
 Remember that in LLVM IR control-flow is implemented by jumping between *basic
 blocks*, which contain instruction sequences that do not change control flow.
@@ -19,7 +19,7 @@ br i1 <cond>, label <iftrue>, label <iffalse>
 br label <dest>
 ```
 
-{% codesnippet "control-structures/listings/simple_if_max_cleaned.ll" language="llvm" %}{% endcodesnippet %}
+{% codesnippet "control-structures/listings/simple_if_max_cleaned.ll", language="llvm" %}{% endcodesnippet %}
 
 In the example above, there are 4 basic blocks. The first one is the function
 entry block. There space is allocated on the stack with `alloca`, which acts as
@@ -44,7 +44,7 @@ snippet with higher optimization levels, LLVM will optimize the code to use the
 branches. The `select` instruction simply chooses between two values, based on
 a boolean condition. This shortens the code significantly.
 
-{% codesnippet "control-structures/listings/simple_if_max_O1_cleaned.ll" language="llvm" %}{% endcodesnippet %}
+{% codesnippet "control-structures/listings/simple_if_max_O1_cleaned.ll", language="llvm" %}{% endcodesnippet %}
 
 
 <a name="br-link">1</a>: [LangRef: br](http://llvm.org/docs/LangRef.html#br-instruction)

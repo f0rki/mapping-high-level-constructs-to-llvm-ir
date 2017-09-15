@@ -1,6 +1,7 @@
 {
     "plugins": [
-        "codesnippet"
+        "codesnippet",
+        "image-captions"
     ],
     "pluginsConfig": {
 
