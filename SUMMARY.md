@@ -1,7 +1,6 @@
 # Summary
 
 * [A Quick Primer](a-quick-primer/README.md)
-* [Some Useful LLVM Tools](some-useful-llvm-tools/README.md)
 * [Basic Constructs](basic-constructs/README.md)
    * [Global Variables](basic-constructs/global-variables.md)
    * [Local Variables](basic-constructs/local-variables.md)
@@ -14,7 +13,7 @@
    * [Nested Structures](basic-constructs/nested-structures.md)
    * [Unions](basic-constructs/unions.md)
    * [Structure Expressions](basic-constructs/structure-expressions.md)
-* [Control Flow](control-structures/README.md)
+* [Control Flow Constructs](control-structures/README.md)
    * [if-then-else](control-structures/if-then-else.md)
 * [Object-Oriented Constructs](object-oriented-constructs/README.md)
    * [Classes](object-oriented-constructs/classes.md)
