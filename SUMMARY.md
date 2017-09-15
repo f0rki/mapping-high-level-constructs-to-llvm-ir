@@ -14,6 +14,8 @@
    * [Nested Structures](basic-constructs/nested-structures.md)
    * [Unions](basic-constructs/unions.md)
    * [Structure Expressions](basic-constructs/structure-expressions.md)
+* [Control Flow](control-structures/README.md)
+   * [if-then-else](control-structures/if-then-else.md)
 * [Object-Oriented Constructs](object-oriented-constructs/README.md)
    * [Classes](object-oriented-constructs/classes.md)
    * [Virtual Methods](object-oriented-constructs/virtual-methods.md)
