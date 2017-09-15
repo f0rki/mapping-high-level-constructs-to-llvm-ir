@@ -1,11 +1,8 @@
 {
     "plugins": [
-        "plugins" : [ "include-highlight" ]
+        "plugins" : [ "codesnippet" ]
     ],
     "pluginsConfig": {
-        "include-highlight": {
-            "extensionToLanguage": {
-                "ll": "llvm"
-            }
-        }
+
     }
+}
