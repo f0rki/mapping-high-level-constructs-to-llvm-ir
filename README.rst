@@ -2,7 +2,7 @@ Mapping High Level Constructs to LLVM IR
 ========================================
 
 `Click here to read the book on
-gitbooks.io <https://f0rki.gitbooks.io/mapping-high-level-constructs-to-llvm-ir/content/>`__
+readthedocs.org <http://mapping-high-level-constructs-to-llvm-ir.rtfd.io/>`__
 
 About
 -----
@@ -38,9 +38,8 @@ pull-request <https://github.com/f0rki/mapping-high-level-constructs-to-llvm-ir/
 License
 -------
 
-UNLESS OTHERWISE NOTED, THE CONTENTS OF THIS REPOSITORY ARE LICENSED
-UNDER THE CREATIVE COMMONS ATTRIBUTION - SHARE ALIKE 4.0 INTERNATIONAL
-LICENSE
+UNLESS OTHERWISE NOTED, THE CONTENTS OF THIS REPOSITORY/DOCUMENT ARE LICENSED
+UNDER THE CREATIVE COMMONS ATTRIBUTION - SHARE ALIKE 4.0 INTERNATIONAL LICENSE
 
 .. figure:: https://i.creativecommons.org/l/by-sa/4.0/88x31.png
    :alt: https://creativecommons.org/licenses/by-sa/4.0/
