@@ -61,11 +61,3 @@ UNDER THE CREATIVE COMMONS ATTRIBUTION - SHARE ALIKE 4.0 INTERNATIONAL LICENSE
    interfacing-to-the-operating-system/index
    epilogue/index
    appendix-a-how-to-implement-a-string-type-in-llvm/index
-
-
-Indices and tables
-------------------
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

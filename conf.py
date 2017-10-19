@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 #
 
-extensions = ['sphinx.ext.todo', 'sphinx.ext.mathjax']
+# extensions = ['sphinx.ext.todo', 'sphinx.ext.mathjax']
+extensions = []
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -14,8 +15,8 @@ master_doc = 'README'
 
 # General information about the project.
 project = 'Mapping High Level Constructs to LLVM IR'
-copyright = '2017, Test'
-author = 'Test'
+author = 'Michael Rodler'
+copyright = '2017, ' + author
 
 # The short X.Y version.
 version = ''
