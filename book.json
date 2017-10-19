@@ -1,9 +1,0 @@
-{
-    "plugins": [
-        "codesnippet",
-        "image-captions"
-    ],
-    "pluginsConfig": {
-
-    }
-}
