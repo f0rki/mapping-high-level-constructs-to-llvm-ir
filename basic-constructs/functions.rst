@@ -104,7 +104,7 @@ name. For a C++ example:
         return a + b;
     }
 
-    int function(double a, double b, double x) {
+    double function(double a, double b, double x) {
         return a*b + x;
     }
 
@@ -113,12 +113,12 @@ names etc.
 
 .. code-block:: llvm
 
-    define i32 @_Z4funcii(i32 %a, i32 %b) #0 {
+    define i32 @_Z8functionii(i32 %a, i32 %b) #0 {
     ; [...]
       ret i32 %5
     }
 
-    define double @_Z4funcddd(double %a, double %b, double %x) #0 {
+    define double @_Z8functionddd(double %a, double %b, double %x) #0 {
     ; [...]
       ret double %8
     }
