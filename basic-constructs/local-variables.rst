@@ -64,5 +64,5 @@ program is in SSA form but can generate code without having to worry
 about this aspect of the code generation.
 
 This trick is also described in chapter 7.4, `Mutable Variables in
-Kaleidoscope <llvm.org/docs/tutorial/OCamlLangImpl7.html-mutable-variables-in-kaleidoscope>`__,
-in the OCaml tutorial on the `LLVM website <www.llvm.org>`__.
+Kaleidoscope <https://www.llvm.org/docs/tutorial/OCamlLangImpl7.html#mutable-variables-in-kaleidoscope>`__,
+in the OCaml tutorial on the `LLVM website <https://www.llvm.org>`__.
