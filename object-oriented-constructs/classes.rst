@@ -51,7 +51,7 @@ We first transform this code into two separate pieces:
     ; The Foo::GetLength() method.
     define i32 @Foo_GetLength(%Foo* %this) nounwind {
         %1 = getelementptr %Foo* %this, i32 0, i32 0
-        %2 = load i32* %this
+        %2 = load i32* %1
         ret i32 %2
     }
 
