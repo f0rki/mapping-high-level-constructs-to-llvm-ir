@@ -26,7 +26,7 @@ On POSIX, it is really very easy to create the ``Hello world`` program:
     @.hello = private unnamed_addr constant [13 x i8] c"hello world\0A\00"
 
     define i32 @main(i32 %argc, i8** %argv) {
-        %1 = getelementptr [13 x i8]* @.hello, i32 0, i32 0
+        %1 = getelementptr [13 x i8], [13 x i8]* @.hello, i32 0, i32 0
         call i32 @puts(i8* %1)
         ret i32 0
     }
@@ -60,7 +60,7 @@ Sample Windows "Hello World" Application
 
     define i32 @main(i32 %argc, i8** %argv) nounwind {
         %1 = call i8* @"\01_GetStdHandle@4"(i32 -11)    ; -11 = STD_OUTPUT_HANDLE
-        %2 = getelementptr [13 x i8]* @hello, i32 0, i32 0
+        %2 = getelementptr [13 x i8], [13 x i8]* @.hello, i32 0, i32 0
         %3 = call i32 @"\01_WriteFile@20"(i8* %1, i8* %2, i32 12, i32* null, %struct._OVERLAPPED* null)
         ; todo: Check that %4 is not equal to -1 (INVALID_HANDLE_VALUE)
         ret i32 0
