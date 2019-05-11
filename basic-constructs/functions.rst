@@ -40,7 +40,7 @@ referenced from outside of the defining module:
     }
 
 Note that this does not directly map to public/private in the context of
-``C++``. Two ``C++`` classes in side one LLVM module can call each other
+``C++``. Two ``C++`` classes inside one LLVM module can call each other
 private methods, because they're simply module-level private functions for
 LLVM.
 
