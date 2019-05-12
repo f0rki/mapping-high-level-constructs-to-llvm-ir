@@ -79,7 +79,7 @@ You use the ``zext`` instruction:
     @word = global i32 0
 
     define void @main() nounwind {
-        %1 = load i8* @byte
+        %1 = load i8, i8* @byte
         %2 = zext i8 %1 to i32
         store i32 %2, i32* @word
         ret void
@@ -98,7 +98,7 @@ section:
     @int  = global i32 0
 
     define void @main() nounwind {
-        %1 = load i8* @char
+        %1 = load i8, i8* @char
         %2 = sext i8 %1 to i32
         store i32 %2, i32* @int
         ret void
@@ -118,7 +118,7 @@ for which reason ``trunc`` is sufficient to handle both cases:
     @char = global i8 0
 
     define void @main() nounwind {
-        %1 = load i32* @int
+        %1 = load i32, i32* @int
         %2 = trunc i32 %1 to i8
         store i8 %2, i8* @char
         ret void
@@ -148,7 +148,7 @@ Becomes:
     @large = global double 0.0
 
     define void @main() nounwind {
-        %1 = load float* @small
+        %1 = load float, float* @small
         %2 = fpext float %1 to double
         store double %2, double* @large
         ret void
@@ -165,7 +165,7 @@ Likewise, a floating point number can be truncated to a smaller size:
     @small = global float 0.0
 
     define void @main() nounwind {
-        %1 = load double* @large
+        %1 = load double, double* @large
         %2 = fptrunc double %1 to float
         store float %2, float* @small
         ret void
