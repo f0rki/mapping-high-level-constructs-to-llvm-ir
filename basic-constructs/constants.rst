@@ -39,7 +39,7 @@ with the following little snippet of code:
 .. code-block:: llvm
 
     %Struct = type { i8, i32, i8* }
-    @Struct_size = constant i32 ptrtoint (%Struct* getelementptr (%Struct* null, i32 1)) to i32
+    @Struct_size = constant i32 ptrtoint (%Struct* getelementptr (%Struct, %Struct* null, i32 1) to i32)
 
 ``@Struct_size`` will now contain the size of the structure ``%Struct``.
 The trick is to compute the offset of the second element
