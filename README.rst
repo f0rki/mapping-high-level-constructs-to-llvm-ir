@@ -28,7 +28,7 @@ symbols.
 Contributing
 ------------
 
-The repository for this gitbook is hosted on
+The repository for this document is hosted on
 `github <https://github.com/f0rki/mapping-high-level-constructs-to-llvm-ir>`__.
 All contributions are welcome. If you find an error file an
 `Issue <https://github.com/f0rki/mapping-high-level-constructs-to-llvm-ir/issues>`__
