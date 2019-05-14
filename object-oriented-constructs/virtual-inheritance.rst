@@ -2,7 +2,7 @@ Virtual Inheritance
 -------------------
 
 Virtual inheritance is actually quite simple as it dictates that
-identical base classes are to be merged into a single occurence. For
+identical base classes are to be merged into a single occurrence. For
 instance, given this:
 
 .. code-block:: cpp

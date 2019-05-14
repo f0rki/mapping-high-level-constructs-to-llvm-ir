@@ -20,7 +20,7 @@ two basic block labels as parameter.
 
     br i1 %cond, label %iftrue, label %iffalse
 
-``br`` can also be used to unconditinally jump to a certain destination:
+``br`` can also be used to unconditionally jump to a certain destination:
 
 .. code-block:: llvm
 

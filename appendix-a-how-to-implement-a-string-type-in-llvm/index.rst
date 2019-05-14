@@ -10,7 +10,7 @@ There are two ways to implement a string type in LLVM:
 I'd personally much prefer to use the second method, but for the sake of
 the example, I'll go ahead and illustrate a simple but useful string
 type in LLVM IR. It assumes a 32-bit architecture, so please replace all
-occurences of ``i32`` with ``i64`` if you are targetting a 64-bit
+occurrences of ``i32`` with ``i64`` if you are targetting a 64-bit
 architecture.
 
 We'll be making a dynamic, mutable string type that can be appended to

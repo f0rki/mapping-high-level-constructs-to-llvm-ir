@@ -159,7 +159,7 @@ objects.
 
 
 It is highly recommended to read the LLVM docs about the GEP instruction very
-thouroughly (see [#llvm-gep-doc]_ [#llvm-gep-langref]_).
+thoroughly (see [#llvm-gep-doc]_ [#llvm-gep-langref]_).
 
 .. [#llvm-gep-doc] `The Often Misunderstood GEP Instruction <http://llvm.org/docs/GetElementPtr.html>`_
 .. [#llvm-gep-langref] `LangRef: getelementptr Instruction <http://llvm.org/docs/LangRef.html#getelementptr-instruction>`_
