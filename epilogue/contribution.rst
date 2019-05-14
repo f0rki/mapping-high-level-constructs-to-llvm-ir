@@ -29,5 +29,6 @@ all very much!):
    between generator C++ and LLVM IR code).
 -  Kenneth Ho (correction to C++11 lambda example and C++ exception
    handling sample).
+-  Xing GUO (correction to various typos, updates to LLVM 8 syntax)
 
 Should your name be here? If so, contribute :-)
