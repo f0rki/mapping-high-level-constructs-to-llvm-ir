@@ -60,7 +60,7 @@ significantly.
     :language: llvm
 
 
-.. [#allocalink] `LangRef: alloca <http://llvm.org/docs/LangRef.html#alloca-instruction> `__
+.. [#allocalink] `LangRef: alloca <http://llvm.org/docs/LangRef.html#alloca-instruction>`__
 .. [#brlink] `LangRef: br <http://llvm.org/docs/LangRef.html#br-instruction>`__
 .. [#icmplink] `LangRef: icmp <http://llvm.org/docs/LangRef.html#icmp-instruction>`__
 .. [#selectlink] `LangRef: select <http://llvm.org/docs/LangRef.html#select-instruction>`__
