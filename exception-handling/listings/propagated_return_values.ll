@@ -17,7 +17,7 @@ declare i32 @puts(i8* noalias nocapture) nounwind
 
 @.Object_vtable = private constant %Object_vtable_type {
 	%Object_vtable_type* null,    ; This is the root object of the object hierarchy
-	i8* getelementptr([7 x i8]* @.Object_class_name, i32 0, i32 0)
+	i8* getelementptr([7 x i8], [7 x i8]* @.Object_class_name, i32 0, i32 0)
 }
 
 %Object = type {
@@ -34,21 +34,21 @@ define i1 @Object_IsA(%Object* %object, i8* %name) nounwind {
 	br i1 %0, label %.once, label %.exit_false
 
 .once:
-	%1 = getelementptr %Object* %object, i32 0, i32 0
+	%1 = getelementptr %Object, %Object* %object, i32 0, i32 0
 	br label %.body
 
 .body:
 	; if (vtable->class == name)
 	%2 = phi %Object_vtable_type** [ %1, %.once ], [ %7, %.next]
-	%3 = load %Object_vtable_type** %2
-	%4 = getelementptr %Object_vtable_type* %3, i32 0, i32 1
-	%5 = load i8** %4
+	%3 = load %Object_vtable_type*, %Object_vtable_type** %2
+	%4 = getelementptr %Object_vtable_type, %Object_vtable_type* %3, i32 0, i32 1
+	%5 = load i8*, i8** %4
 	%6 = icmp eq i8* %5, %name
 	br i1 %6, label %.exit_true, label %.next
 
 .next:
 	; object = object->above
-	%7 = getelementptr %Object_vtable_type* %3, i32 0, i32 0
+	%7 = getelementptr %Object_vtable_type, %Object_vtable_type* %3, i32 0, i32 0
 
 	; while (object != null)
 	%8 = icmp ne %Object_vtable_type* %3, null
@@ -73,7 +73,7 @@ define i1 @Object_IsA(%Object* %object, i8* %name) nounwind {
 
 @.Exception_vtable = private constant %Exception_vtable_type {
 	%Object_vtable_type* @.Object_vtable,        ; the parent of this class is the Object class
-	i8* getelementptr([10 x i8]* @.Exception_class_name, i32 0, i32 0)
+	i8* getelementptr([10 x i8], [10 x i8]* @.Exception_class_name, i32 0, i32 0)
 }
 
 %Exception = type {
@@ -83,19 +83,19 @@ define i1 @Object_IsA(%Object* %object, i8* %name) nounwind {
 
 define void @Exception_Create_String(%Exception* %this, i8* %text) nounwind {
 	; set up vtable
-	%1 = getelementptr %Exception* %this, i32 0, i32 0
+	%1 = getelementptr %Exception, %Exception* %this, i32 0, i32 0
 	store %Exception_vtable_type* @.Exception_vtable, %Exception_vtable_type** %1
 
 	; save input text string into _text
-	%2 = getelementptr %Exception* %this, i32 0, i32 1
+	%2 = getelementptr %Exception, %Exception* %this, i32 0, i32 1
 	store i8* %text, i8** %2
 
 	ret void
 }
 
 define i8* @Exception_GetText(%Exception* %this) nounwind {
-	%1 = getelementptr %Exception* %this, i32 0, i32 1
-	%2 = load i8** %1
+	%1 = getelementptr %Exception, %Exception* %this, i32 0, i32 1
+	%2 = load i8*, i8** %1
 	ret i8* %2
 }
 
@@ -104,19 +104,19 @@ define i8* @Exception_GetText(%Exception* %this) nounwind {
 %Foo = type { i32 }
 
 define void @Foo_Create_Default(%Foo* %this) nounwind {
-	%1 = getelementptr %Foo* %this, i32 0, i32 0
+	%1 = getelementptr %Foo, %Foo* %this, i32 0, i32 0
 	store i32 0, i32* %1
 	ret void
 }
 
 define i32 @Foo_GetLength(%Foo* %this) nounwind {
-	%1 = getelementptr %Foo* %this, i32 0, i32 0
-	%2 = load i32* %1
+	%1 = getelementptr %Foo, %Foo* %this, i32 0, i32 0
+	%2 = load i32, i32* %1
 	ret i32 %2
 }
 
 define void @Foo_SetLength(%Foo* %this, i32 %value) nounwind {
-	%1 = getelementptr %Foo* %this, i32 0, i32 0
+	%1 = getelementptr %Foo, %Foo* %this, i32 0, i32 0
 	store i32 %value, i32* %1
 	ret void
 }
@@ -140,7 +140,7 @@ define %Exception* @Bar(i1 %fail, i32* %result) nounwind {
 	; throw new Exception(...)
 	%2 = call i8* @malloc(i32 8)
 	%3 = bitcast i8* %2 to %Exception*
-	%4 = getelementptr [30 x i8]* @.message1, i32 0, i32 0
+	%4 = getelementptr [30 x i8], [30 x i8]* @.message1, i32 0, i32 0
 	call void @Exception_Create_String(%Exception* %3, i8* %4)
 	ret %Exception* %3
 
@@ -173,18 +173,18 @@ define i32 @main(i32 %argc, i8** %argv) nounwind {
 
 .catch_block:
 	%4 = bitcast %Exception* %2 to %Object*
-	%5 = getelementptr [10 x i8]* @.Exception_class_name, i32 0, i32 0
+	%5 = getelementptr [10 x i8], [10 x i8]* @.Exception_class_name, i32 0, i32 0
 	%6 = call i1 @Object_IsA(%Object* %4, i8* %5)
 	br i1 %6, label %.catch_exception, label %.catch_all
 
 .catch_exception:
-	%7 = getelementptr [11 x i8]* @.message2, i32 0, i32 0
+	%7 = getelementptr [11 x i8], [11 x i8]* @.message2, i32 0, i32 0
 	%8 = call i8* @Exception_GetText(%Exception* %2)
-	%9 = call i32 (i8*, ...)* @printf(i8* %7, i8* %8)
+	%9 = call i32 (i8*, ...) @printf(i8* %7, i8* %8)
 	br label %.exit
 
 .catch_all:
-	%10 = getelementptr [44 x i8]* @.message3, i32 0, i32 0
+	%10 = getelementptr [44 x i8], [44 x i8]* @.message3, i32 0, i32 0
 	%11 = call i32 @puts(i8* %10)
 	br label %.exit
 

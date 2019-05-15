@@ -43,7 +43,7 @@ declaring a the base class as a first member in the inheriting class:
     }
 
     define void @Base_SetA(%Base* %this, i32 %value) nounwind {
-        %1 = getelementptr %Base* %this, i32 0, i32 0
+        %1 = getelementptr %Base, %Base* %this, i32 0, i32 0
         store i32 %value, i32* %1
         ret void
     }
@@ -56,7 +56,7 @@ declaring a the base class as a first member in the inheriting class:
     define void @Derived_SetB(%Derived* %this, i32 %value) nounwind {
         %1 = bitcast %Derived* %this to %Base*
         call void @Base_SetA(%Base* %1, i32 %value)
-        %2 = getelementptr %Derived* %this, i32 0, i32 1
+        %2 = getelementptr %Derived, %Derived* %this, i32 0, i32 1
         store i32 %value, i32* %2
         ret void
     }
