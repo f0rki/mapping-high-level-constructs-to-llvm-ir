@@ -56,7 +56,7 @@ This is equivalent to the following LLVM IR:
     }
 
     define void @BaseA_SetA(%BaseA* %this, i32 %value) nounwind {
-        %1 = getelementptr %BaseA* %this, i32 0, i32 0
+        %1 = getelementptr %BaseA, %BaseA* %this, i32 0, i32 0
         store i32 %value, i32* %1
         ret void
     }
@@ -69,7 +69,7 @@ This is equivalent to the following LLVM IR:
     define void @BaseB_SetB(%BaseB* %this, i32 %value) nounwind {
         %1 = bitcast %BaseB* %this to %BaseA*
         call void @BaseA_SetA(%BaseA* %1, i32 %value)
-        %2 = getelementptr %BaseB* %this, i32 0, i32 1
+        %2 = getelementptr %BaseB, %BaseB* %this, i32 0, i32 1
         store i32 %value, i32* %2
         ret void
     }
@@ -83,7 +83,7 @@ This is equivalent to the following LLVM IR:
     define void @Derived_SetC(%Derived* %this, i32 %value) nounwind {
         %1 = bitcast %Derived* %this to %BaseB*
         call void @BaseB_SetB(%BaseB* %1, i32 %value)
-        %2 = getelementptr %Derived* %this, i32 0, i32 2
+        %2 = getelementptr %Derived, %Derived* %this, i32 0, i32 2
         store i32 %value, i32* %2
         ret void
     }
