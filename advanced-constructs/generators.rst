@@ -6,7 +6,7 @@ that the function's state is preserved across the repeated calls of the
 function; this includes the function's local offset at the point it
 yielded a value.
 
-The most straigthforward way to implement a generator is by wrapping all
+The most straightforward way to implement a generator is by wrapping all
 of its state variables (arguments, local variables, and return values)
 up into an ad-hoc structure and then pass the address of that structure
 to the generator.
@@ -24,7 +24,7 @@ The important thing is to think of iterators as a sort of micro-thread
 that is resumed whenever the iterator is called again. In other words,
 we need to save the address of how far the iterator got on each pass
 through so that it can resume as if a microscopic thread switch had
-occured. So we save the address of the instruction after the return
+occurred. So we save the address of the instruction after the return
 instruction so that we can resume running as if we never had returned in
 the first place.
 

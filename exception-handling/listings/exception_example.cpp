@@ -13,11 +13,11 @@ class Exception : public Object {
   {
   }
 
-  const char* GetText(const) { return _text; }
+  const char* GetText() const { return _text; }
 
   private:
   const char* _text;
-}
+};
 
 class Foo {
   public:

@@ -40,7 +40,7 @@ referenced from outside of the defining module:
     }
 
 Note that this does not directly map to public/private in the context of
-``C++``. Two ``C++`` classes in side one LLVM module can call each other
+``C++``. Two ``C++`` classes inside one LLVM module can call each other
 private methods, because they're simply module-level private functions for
 LLVM.
 
@@ -72,7 +72,7 @@ Functions with a Variable Number of Parameters
 
 To call a so-called vararg function, you first need to define or declare
 it using the elipsis (...) and then you need to make use of a special
-syntax for function calls that allows you to explictly list the types of
+syntax for function calls that allows you to explicitly list the types of
 the parameters of the function that is being called. This "hack" exists
 to allow overriding a call to a function such as a function with
 variable parameters. Please notice that you only need to specify the
@@ -184,9 +184,9 @@ This simple example is in turn compiled to
       ret void
     }
 
-We can see that the funtion now actually returns ``void`` and another
+We can see that the function now actually returns ``void`` and another
 parameter was added. The first parameter is a pointer to the result,
-which is allocated by the caller. The pointer has the attirbute
+which is allocated by the caller. The pointer has the attribute
 ``noalias`` because there is no way that one of the parameters might
 point to the same location. The ``sret`` attribute indicates that this
 is the return value.
