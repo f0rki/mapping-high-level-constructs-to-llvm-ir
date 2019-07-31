@@ -32,7 +32,7 @@ two basic block labels as parameter.
 In the example above, there are 4 basic blocks. The first one is the
 function entry block. There space is allocated on the stack with
 ``alloca`` [#allocalink]_, which acts as a temporary storage for the bigger value. Then
-the two paramter ``%a`` and ``%b`` are compared using the
+the two parameter ``%a`` and ``%b`` are compared using the
 ``icmp`` instruction [#icmplink]_. The result is a boolean
 (``i1``) flag, which is then used as condition for the ``br``
 instruction. Then depending on the taken branch, either ``%a`` or ``%b``
