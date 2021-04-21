@@ -92,7 +92,10 @@ then define a rich set of functions to operate on the type definition:
 
         ; this->buffer = %output
         store i8* %output, i8** %1
-
+        
+        ;this->maxlen = %value (value that was passed into @malloc is the new maxlen)
+        %4 = getelementptr %String* this, i32 0, i32 2
+        store i32 %value, i32* %4
         ret void
     }
 
