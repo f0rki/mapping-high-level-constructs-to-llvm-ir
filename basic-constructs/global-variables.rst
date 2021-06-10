@@ -1,7 +1,7 @@
 Global Variables
 ----------------
 
-Global varibles are trivial to implement in LLVM IR:
+Global variables are trivial to implement in LLVM IR:
 
 .. code-block:: cpp
 
