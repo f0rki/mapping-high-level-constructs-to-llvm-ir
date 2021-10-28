@@ -1,5 +1,5 @@
 ; jmp_buf is very platform specific, this is for illustration only...
-%jmp_buf = type { i32 }
+%jmp_buf = type [ 5 x i32 ]
 declare i32 @setjmp(%jmp_buf* %env)
 declare void @longjmp(%jmp_buf* %env, i32 %val)
 
