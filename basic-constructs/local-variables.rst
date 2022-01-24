@@ -63,6 +63,6 @@ possibly can. That way you don't have to ensure that the generated
 program is in SSA form but can generate code without having to worry
 about this aspect of the code generation.
 
-This trick is also described in chapter 7.4, `Mutable Variables in
-Kaleidoscope <https://www.llvm.org/docs/tutorial/OCamlLangImpl7.html#mutable-variables-in-kaleidoscope>`__,
-in the OCaml tutorial on the `LLVM website <https://www.llvm.org>`__.
+This trick is also described in the chapter on `Mutable Variables in
+Kaleidoscope <https://www.llvm.org/docs/tutorial/MyFirstLanguageFrontend/LangImpl07.html#mutable-variables-in-kaleidoscope>`__,
+in the tutorial on the `LLVM website <https://www.llvm.org>`__.
