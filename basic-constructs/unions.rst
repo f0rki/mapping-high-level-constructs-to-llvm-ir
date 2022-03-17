@@ -84,7 +84,7 @@ initialize the ``Foo`` variables.
    %Foo_ADouble = type { i8, double } ; tagged with 2
     
    ; allocate the first Foo
-   %z = alloca %Foo
+   %x = alloca %Foo
    ; pointer to the first element of type i8 (the tag)
    %0 = getelementptr inbounds %Foo, %Foo* %x, i32 0, i32 0
    ; set tag to '1'
