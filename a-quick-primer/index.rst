@@ -54,7 +54,7 @@ you use either of those. This option makes Clang/Clang++ insert run-time
 checks in places where it would normally output an ``ud2`` instruction.
 This will likely save you some trouble if you happen to generate
 undefined LLVM IR. Please notice that this option only works for C and
-C++ compiles.
+C++ compilers.
 
 Note that you can use ``.ll`` or ``.bc`` files as input files for
 ``clang(++)`` and compile full executables from bitcode files.
