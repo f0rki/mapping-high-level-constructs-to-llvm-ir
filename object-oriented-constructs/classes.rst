@@ -3,7 +3,7 @@ Classes
 
 A class is nothing more than a structure with an associated set of
 functions that take an implicit first parameter, namely a pointer to the
-structure. Therefore, is is very trivial to map a class to LLVM IR:
+structure. Therefore, it is very trivial to map a class to LLVM IR:
 
 .. code-block:: cpp
 
