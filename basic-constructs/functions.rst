@@ -227,7 +227,7 @@ is compiled to:
       %5 = bitcast %struct.Point* %1 to i8*
       %6 = bitcast %struct.Point* %a to i8*
       call void @llvm.memcpy.p0i8.p0i8.i64(i8* %5, i8* %6, i64 24, i32 8, i1 false)
-    ; clone b to %1
+    ; clone b to %2
       %7 = bitcast %struct.Point* %2 to i8*
       %8 = bitcast %struct.Point* %b to i8*
       call void @llvm.memcpy.p0i8.p0i8.i64(i8* %7, i8* %8, i64 24, i32 8, i1 false)
