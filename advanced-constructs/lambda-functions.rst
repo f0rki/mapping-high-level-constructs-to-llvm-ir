@@ -7,7 +7,7 @@ in the containing function. Lambdas are implemented just like Pascal's
 nested functions, except the compiler is responsible for generating an
 internal name for the lambda function. There are a few different ways of
 implementing lambda functions (see `Wikipedia on Nested
-Functions <en.wikipedia.org/wiki/Nested_function>`__ for more
+Functions <https://en.wikipedia.org/wiki/Nested_function>`__ for more
 information).
 
 .. literalinclude:: listings/lambda_func_0.cpp
