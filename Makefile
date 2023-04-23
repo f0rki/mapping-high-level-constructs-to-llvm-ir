@@ -2,8 +2,8 @@
 #
 
 # You can set these variables from the command line.
-SPHINXOPTS    = 
-SPHINXBUILD   = sphinx-build-3
+SPHINXOPTS    =
+SPHINXBUILD   = sphinx-build
 SPHINXPROJ    = MappingHighLevelConstructstoLLVMIR
 SOURCEDIR     = .
 BUILDDIR      = _build
