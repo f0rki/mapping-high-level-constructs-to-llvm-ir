@@ -18,3 +18,11 @@ help:
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+docker-run:
+	# NOTE: The command below MUST be run using sudo: sudo make docker-run.
+	docker run -w /app --mount type=bind,src="$(shell pwd)",target=/app llvm-ir sh -c "make $(SPHINXOPTS) $(O)"
+
+docker-build:
+	# NOTE: The command below MUST be run using sudo: sudo make docker-build.
+	docker build --build-arg=NATIVE_UID=$(id -u ${USER}) --build-arg=NATIVE_GID=$(id -g ${USER}) -t llvm-ir .
