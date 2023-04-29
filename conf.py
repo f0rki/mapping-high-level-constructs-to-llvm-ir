@@ -11,12 +11,12 @@ templates_path = ['_templates']
 source_suffix = ['.rst']
 
 # The master toctree document.
-master_doc = 'README'
+master_doc = 'INDEX'
 
 # General information about the project.
 project = 'Mapping High Level Constructs to LLVM IR'
-author = 'Michael Rodler'
-copyright = '2018, ' + author
+author = 'Michael Rodler and Mikael Egevig'
+copyright = '2014-2023 ' + author
 
 # The short X.Y version.
 version = ''
