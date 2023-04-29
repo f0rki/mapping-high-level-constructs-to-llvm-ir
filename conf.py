@@ -15,8 +15,8 @@ master_doc = 'README'
 
 # General information about the project.
 project = 'Mapping High Level Constructs to LLVM IR'
-author = 'Michael Rodler'
-copyright = '2018, ' + author
+author = 'Michael Rodler and Mikael Egevig'
+copyright = '2014-2023 ' + author
 
 # The short X.Y version.
 version = ''
