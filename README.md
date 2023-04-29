@@ -19,35 +19,42 @@ production compiler for any language that supports overloading would
 generally need to mangle the names so as to avoid conflicts between
 symbols.
 
-## The Book
-Read the book online [ReadTheDocs](http://mapping-high-level-constructs-to-llvm-ir.rtfd.io/).
+## Reading the Book
+Read the book online at [ReadTheDocs](https://mapping-high-level-constructs-to-llvm-ir.rtfd.io/).
 
 ## Contributing
-The repository for this document is hosted on
-`github <https://github.com/f0rki/mapping-high-level-constructs-to-llvm-ir>`__.
+All contributions are welcome!
 
-All contributions are welcome. If you find an error file an
-`Issue <https://github.com/f0rki/mapping-high-level-constructs-to-llvm-ir/issues>`__
-or fork the repository `and create a
-pull-request <https://github.com/f0rki/mapping-high-level-constructs-to-llvm-ir/pulls>`__.
+The GitHub repository is [GitHub](https://github.com/f0rki/mapping-high-level-constructs-to-llvm-ir).
+
+If you find an error, [file an issue](https://github.com/f0rki/mapping-high-level-constructs-to-llvm-ir/issues)
+or [create a pull request](https://github.com/f0rki/mapping-high-level-constructs-to-llvm-ir/pulls).
 
 ## Building
 You can build the book in one of two ways: Using Ubuntu Linux or Docker on Linux.
 
-### Building on Ubuntu Linux
-1. Install Make and friends: `sudo apt install -y build-essential` (244 MB).
+### Fetching the Project
+1. Change to your home directory: `cd ~`
+2. Clone the GitHub repository: `git clone https://github.com/f0rki/mapping-high-level-constructs-to-llvm-ir llvm-ir`
+3. Enter the project directory: `cd llvm-ir`
+
+### Setting Up Ubuntu Linux
+1. Install Make and some friends: `sudo apt install -y build-essential` (244 MB).
 2. Install the Python pip tool: `sudo apt install -y python3-pip` (38 MB).
 3. Install Sphinx for Python: `sudo apt install -y python3-sphinx` (15 MB).
 4. Install ReadTheDocs theme for sphinx: `sudo apt install -y python3-sphinx-rtd-theme` (15 MB).
+
+You can now build the documentation locally:
+
 5. Build the documentation locally: `make html`.
 6. You can now browse the documentation in the `_build/html` folder.
 
 ### Building using Docker
 1. [Install Docker](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository).
-   DO NOT ATTEMPT TO INSTALL DOCKER USING THE STANDARD UBUNTU REPOSITORIES, IT WON'T WORK!
+   NOTE: DO NOT INSTALL USING THE STANDARD UBUNTU REPOSITORIES. IT WON'T WORK!
 2. Create the docker image: `sudo make docker-build`.
 3. Make the book: `sudo make docker-make O=html`.
-4. The book can now, as with the native Ubuntu build, be found in the `_build/html` folder.
+4. The book can now be found in the `_build/html` folder.
 
 ## License
 UNLESS OTHERWISE NOTED, THE CONTENTS OF THIS REPOSITORY/DOCUMENT ARE LICENSED
