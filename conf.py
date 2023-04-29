@@ -11,7 +11,7 @@ templates_path = ['_templates']
 source_suffix = ['.rst']
 
 # The master toctree document.
-master_doc = 'README'
+master_doc = 'INDEX'
 
 # General information about the project.
 project = 'Mapping High Level Constructs to LLVM IR'
