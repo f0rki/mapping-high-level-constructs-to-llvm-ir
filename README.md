@@ -22,6 +22,15 @@ symbols.
 ## Reading the Book
 Read the book online at [ReadTheDocs](https://mapping-high-level-constructs-to-llvm-ir.rtfd.io/).
 
+## Relevant External Resources on LLVM IR
+This section presents various external links of relevance to those studying LLVM IR:
+
+* [Getting Started / Tutorials](https://llvm.org/docs/GettingStartedTutorials.html)
+* [A Gentle Introduction to LLVM IR](https://mcyoung.xyz/2023/08/01/llvm-ir/)
+* [Mapping Python to LLVM IR](https://blog.exaloop.io/python-llvm/)
+
+If you have other relevant links, please open an issue or submit a pull request with the link added to the list above.
+
 ## Contributing
 All contributions are welcome!
 
