@@ -1,3 +1,8 @@
+
+> [!CAUTION]
+> The LLVM code listing in this repository are pretty much out-of-date and do not work with recent LLVM versions (e.g., this was written before opaque pointers became a thing in LLVM). Treat everything with caution. Feel free to fork and send PRs, but do not expect any major updates to this guide.
+
+
 # Mapping High Level Constructs to LLVM IR
 
 ## About
